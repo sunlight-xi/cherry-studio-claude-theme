@@ -1,15 +1,10 @@
-# Cherry Studio 主题
+# Cherry Studio 主题 · Claude × DeepSeek
 
 给 [Cherry Studio](https://github.com/CherryHQ/cherry-studio) 用的自定义 CSS 主题：深色玻璃 + 橙色高光，壁纸内嵌，不依赖任何本地文件。
 
+只有一套。Claude 娘和 DeepSeek 大肥鱼都画在同一张背景图里，所以名字叫 Claude × DeepSeek。
+
 说句实话，这套配色真的很好看。
-
-## 两套主题
-
-1. **Claude 娘主题** —— 深色玻璃配 Claude 角色壁纸，橙色调，安静、克制
-2. **DeepSeek 大肥鱼主题** —— 同一套玻璃骨架，换成 DeepSeek 大肥鱼的壁纸，蓝色调
-
-两套共用同一份 CSS 骨架，区别只在壁纸和主色。当前仓库里的 `cherry-claude-theme.css` 是 Claude 版。
 
 ## 笔记本用户注意（重要）
 
