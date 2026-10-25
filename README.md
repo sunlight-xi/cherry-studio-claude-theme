@@ -33,6 +33,44 @@
 3. 粘贴进设置里的输入框，保存
 4. 从托盘退出 Cherry Studio 再重新打开
 
+## 更换背景图
+
+这套主题的背景图不是外链，是**直接写死在 CSS 里**的，全文只有一处：
+
+```css
+--cherry-wallpaper: url('data:image/jpeg;base64,这样一大串……');
+```
+
+想换背景，只动这一行的引号里面那串东西，别的都不要碰。
+
+**步骤**
+
+1. 准备一张图，建议 2560×1440 左右、JPG、1MB 以内（太大启动会变慢）
+2. 把它转成 base64。有 Python 的话一条命令：
+
+```bash
+python -c "import base64,pathlib;print('data:image/jpeg;base64,'+base64.b64encode(pathlib.Path('你的图.jpg').read_bytes()).decode())"
+```
+
+3. 复制输出的那一整串（以 `data:image/jpeg;base64,` 开头），替换 CSS 里 `--cherry-wallpaper` 引号内的内容
+4. 保存，粘贴回 Cherry Studio，重启
+
+**不想用背景图**
+
+把 `url('...')` 整个换成 `none`：
+
+```css
+--cherry-wallpaper: none;
+```
+
+就变成纯深色底，文件也会从 1MB 掉到 13KB 左右。
+
+**用 AI 改的话**
+
+直接把这句话发给它，不用自己动手：
+
+> 打开这份 CSS，找到 `--cherry-wallpaper` 那一行，把 `url('data:image/...')` 里面引号内的 base64 全部替换成我这张新图的 base64，其余一个字符都不要改。
+
 ## 说明
 
 - 壁纸以 base64 内嵌在 CSS 里，文件约 1MB，属正常
