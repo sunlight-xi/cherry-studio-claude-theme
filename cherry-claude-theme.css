@@ -79,8 +79,8 @@ body {
  * ============================================================ */
 [class*='bg-background'] {
   background-color: rgb(10 9 12 / 0.05) !important;
-  backdrop-filter: blur(1px) saturate(1.04);
-  -webkit-backdrop-filter: blur(1px) saturate(1.04);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 [class*='bg-sidebar'] {
@@ -382,4 +382,26 @@ div:has(> [data-testid='artifact-pane-header']),
   background-color: rgb(24 20 24 / 0.72) !important;
   background-image: none !important;
   color: #fdf8f4 !important;
+}
+
+
+/* ============================================================
+ * 99. 内置浏览器 / 网页视图：不透明，去掉玻璃
+ *     解决网页区透出壁纸、长页面滚动出现残影
+ * ============================================================ */
+webview,
+iframe,
+[data-ui='browser.view'],
+[data-ui~='browser.view'],
+[data-ui*='browser'],
+[data-testid*='browser'],
+[class*='browser-pane'],
+[class*='webview'],
+:has(> webview),
+:has(> iframe) {
+  background-color: #0f0d10 !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
 }
