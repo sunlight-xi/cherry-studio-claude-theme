@@ -1,4 +1,4 @@
-# Cherry Studio 主题 · Claude × DeepSeek
+# Cherry Studio 主题 Claude × DeepSeek
 
 给 [Cherry Studio](https://github.com/CherryHQ/cherry-studio) 用的自定义 CSS 主题：深色玻璃 + 橙色高光，壁纸内嵌，不依赖任何本地文件。
 
